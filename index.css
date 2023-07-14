@@ -14,21 +14,18 @@
   --health-bar-outer-inner-danger-background: #d1435f;
   --dice-container-background: #1e96fc;
   --dice-background: #fff;
-  --dice-border: #666;
+  --dice-border: #111;
   --dice-color: #000721;
   --button-background: #fc0000;
   --button-border: #ffc600;
   --button-color: #fff;
-  --button-disabled: #d9ed92;
+  --button-disabled: #f78a8a;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background-image: url("https://images.unsplash.com/photo-1645116616542-71dc4fb88086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fEphbWVzJTIwQm9uZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
-  background-size: contain;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,20 +33,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-image: url("https://images.unsplash.com/photo-1645116616542-71dc4fb88086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fEphbWVzJTIwQm9uZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-size: contain;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 0.5rem;
+  height: 80vh;
 }
 
 @media (min-width: 550px) {
   main {
     flex-direction: row;
-    margin: 6vh 5vw;
+    margin: 2vh 5vw 0vh;
     justify-content: center;
     width: 86vw;
     gap: 2rem;
+    height: 80vh;
   }
 }
 
@@ -96,7 +100,7 @@ main {
   width: 15vh;
   border: 2px solid var(--img-border);
   max-width: 100%;
-  max-height: 180px;
+  height: 100px;
   object-fit: cover;
   object-position: 100% 20%;
   opacity: 0.8;
@@ -107,6 +111,7 @@ main {
 @media (min-width: 550px) {
   .avatar {
     width: 25vh;
+    height: 180px;
   }
 }
 
@@ -197,7 +202,7 @@ main {
 }
 
 button {
-  margin-top: 0.5rem;
+  margin-bottom: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--button-background);
   border: 2px solid var(--button-border);
@@ -220,7 +225,7 @@ button:active {
 }
 
 button:disabled {
-  background-color: var(--button-disabled);
+  display: none;
 }
 
 @media (min-width: 550px) {
@@ -234,8 +239,11 @@ button:focus {
 }
 
 .end-game {
-  margin-top: 25%;
+  margin-top: 10%;
   text-align: center;
+  color: white;
+
+  padding: 2em;
 }
 
 .end-emoji {

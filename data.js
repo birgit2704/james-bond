@@ -7,7 +7,7 @@ const characterData = {
       "www.GlynLowe.com from Hamburg, Germany, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons",
     health: 50,
     diceCount: 3,
-    currentDiceScore: [],
+    // currentDiceScore: [],
   },
   pierce: {
     name: "James Bond",
@@ -17,7 +17,7 @@ const characterData = {
       "Rita Molnár (cropped by Machocarioca), CC BY-SA 2.5 <https://creativecommons.org/licenses/by-sa/2.5>, via Wikimedia Commons",
     health: 50,
     diceCount: 3,
-    currentDiceScore: [],
+    // currentDiceScore: [],
   },
   sean: {
     name: "James Bond",
@@ -25,9 +25,9 @@ const characterData = {
       "https://upload.wikimedia.org/wikipedia/commons/5/5b/Sean_Connery_as_James_Bond_%281971%2C_cropped%29.jpg",
     imgBy:
       "Rob Mieremet, CC BY-SA 3.0 NL <https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en>, via Wikimedia Commons",
-    health: 50,
-    diceCount: 3,
-    currentDiceScore: [],
+    health: 30,
+    diceCount: 1,
+    // currentDiceScore: [],
   },
   goldfinger: {
     name: "Goldfinger",
@@ -35,7 +35,7 @@ const characterData = {
     imgBy: "",
     health: 30,
     diceCount: 1,
-    currentDiceScore: [],
+    // currentDiceScore: [],
   },
   drNo: {
     name: "Dr. No",
@@ -43,7 +43,7 @@ const characterData = {
     imgBy: "",
     health: 25,
     diceCount: 2,
-    currentDiceScore: [],
+    // currentDiceScore: [],
   },
   villain3: {
     name: "Villain 3",
@@ -51,7 +51,7 @@ const characterData = {
     imgBy: "",
     health: 20,
     diceCount: 3,
-    currentDiceScore: [],
+    // currentDiceScore: [],
   },
 };
 
