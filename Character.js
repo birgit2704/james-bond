@@ -22,7 +22,7 @@ class Character {
     return (this.diceHtml = diceArray
       .map(
         (num) => `
-    <div class="dice">${num}</div>`
+    <img src="./images/${num}die.jpg" alt="${num}" class="die"></img>`
       )
       .join(""));
   }

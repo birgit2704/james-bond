@@ -176,7 +176,7 @@ main {
   }
 }
 
-.dice,
+.die,
 .placeholder-dice {
   height: 5.5vh;
   width: 5.5vh;
@@ -190,7 +190,8 @@ main {
 
 @media (min-width: 550px) {
   .dice-container .dice,
-  .dice-container .placeholder-dice {
+  .dice-container .placeholder-dice,
+  .dice-container .die {
     height: 10vh;
     width: 10vh;
     line-height: 10.5vh;
