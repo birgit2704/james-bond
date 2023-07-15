@@ -7,8 +7,6 @@ const shot = new Audio("./shot.mp3");
 const bond = new Audio("./bond.mp3");
 const attackBtn = document.getElementById("attack-button");
 
-window.onload = bond.play();
-
 document.addEventListener("click", function (e) {
   if (e.target === attackBtn) {
     attack();
@@ -17,16 +15,6 @@ document.addEventListener("click", function (e) {
     window.location.reload();
   }
 });
-
-//endless music loop
-// bond.addEventListener(
-//   "ended",
-//   function () {
-//     this.currentTime = 0;
-//     this.play();
-//   },
-//   false
-// );
 
 render();
 
@@ -38,6 +26,7 @@ function render() {
 function playSound() {
   shot.currentTime = 0;
   shot.play();
+  bond.play();
 }
 
 function attack() {
