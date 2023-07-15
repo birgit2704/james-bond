@@ -1,5 +1,6 @@
 import characterData from "./data.js";
 import Character from "./Character.js";
+import { emojiJamesLoses, emojiJamesWins } from "./utils.js";
 
 const james = new Character(characterData.pierce);
 const villain = new Character(characterData.sean);
@@ -73,11 +74,11 @@ function renderEndMessage() {
 
   if (james.isDead) {
     message = "James has been killed";
-    emoji = "☠️";
+    emoji = emojiJamesLoses;
   }
   if (villain.isDead) {
     message = "James has defeated all villains";
-    emoji = "👍";
+    emoji = emojiJamesWins;
   }
   attackBtn.style.display = "none";
   document.querySelector("main").innerHTML = `

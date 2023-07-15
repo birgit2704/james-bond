@@ -15,7 +15,7 @@ const characterData = {
       "https://upload.wikimedia.org/wikipedia/commons/4/4d/PierceBrosnanCannesPhoto2.jpg",
     imgBy:
       "Rita Molnár (cropped by Machocarioca), CC BY-SA 2.5 <https://creativecommons.org/licenses/by-sa/2.5>, via Wikimedia Commons",
-    health: 50,
+    health: 2,
     diceCount: 3,
     // currentDiceScore: [],
   },
