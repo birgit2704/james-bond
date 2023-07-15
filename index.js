@@ -1,8 +1,8 @@
 import characterData from "./data.js";
 import Character from "./Character.js";
-import { emojiJamesLoses, emojiJamesWins } from "./utils.js";
+import { emojiJamesLoses, emojiJamesWins, innerHtmlJames } from "./utils.js";
 
-const james = new Character(characterData.pierce);
+let james = new Character(characterData.questionmark);
 const villain = new Character(characterData.sean);
 const shot = new Audio("./shot.mp3");
 const bond = new Audio("./bond.mp3");
@@ -17,7 +17,26 @@ document.addEventListener("click", function (e) {
   }
 });
 
-render();
+document.addEventListener("submit", function (e) {
+  if (e.target.id === "choose-james-form") {
+    e.preventDefault();
+    const chosenJames = document.querySelector(
+      'input[type="radio"]:checked'
+    ).value;
+    james = new Character(characterData[chosenJames]);
+    attackBtn.style.display = "block";
+    render();
+  }
+});
+
+chooseJames();
+
+function chooseJames() {
+  attackBtn.style.display = "none";
+  document.getElementById("hero").innerHTML = james.getCharacterHtml();
+  document.getElementById("villain").innerHTML = innerHtmlJames;
+}
+// the above function renders a form, when form is submitted, the function in the submit eventlistener is called
 
 function render() {
   document.getElementById("hero").innerHTML = james.getCharacterHtml();
@@ -64,7 +83,7 @@ function checkIfDead() {
 }
 
 function endGame() {
-  attackBtn.disabled = true;
+  attackBtn.style.display = "none";
   setTimeout(renderEndMessage, 1500);
 }
 

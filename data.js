@@ -1,4 +1,11 @@
 const characterData = {
+  questionmark: {
+    name: "James Bond",
+    avatar: "./images/icons8-asking-64.png",
+    imgBy: "",
+    health: 50,
+    diceCount: 3,
+  },
   daniel: {
     name: "James Bond",
     avatar:
@@ -7,7 +14,6 @@ const characterData = {
       "www.GlynLowe.com from Hamburg, Germany, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons",
     health: 50,
     diceCount: 3,
-    // currentDiceScore: [],
   },
   pierce: {
     name: "James Bond",
@@ -15,9 +21,8 @@ const characterData = {
       "https://upload.wikimedia.org/wikipedia/commons/4/4d/PierceBrosnanCannesPhoto2.jpg",
     imgBy:
       "Rita Molnár (cropped by Machocarioca), CC BY-SA 2.5 <https://creativecommons.org/licenses/by-sa/2.5>, via Wikimedia Commons",
-    health: 2,
+    health: 50,
     diceCount: 3,
-    // currentDiceScore: [],
   },
   sean: {
     name: "James Bond",
@@ -27,7 +32,6 @@ const characterData = {
       "Rob Mieremet, CC BY-SA 3.0 NL <https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en>, via Wikimedia Commons",
     health: 30,
     diceCount: 1,
-    // currentDiceScore: [],
   },
   goldfinger: {
     name: "Goldfinger",
@@ -35,7 +39,6 @@ const characterData = {
     imgBy: "",
     health: 30,
     diceCount: 1,
-    // currentDiceScore: [],
   },
   drNo: {
     name: "Dr. No",
@@ -43,7 +46,6 @@ const characterData = {
     imgBy: "",
     health: 25,
     diceCount: 2,
-    // currentDiceScore: [],
   },
   villain3: {
     name: "Villain 3",
@@ -51,8 +53,11 @@ const characterData = {
     imgBy: "",
     health: 20,
     diceCount: 3,
-    // currentDiceScore: [],
   },
 };
 
 export default characterData;
+
+{
+  /* <a target="_blank" href="https://icons8.com/icon/nZNp1ig4bPnm/asking">Asking</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
+}
