@@ -28,7 +28,7 @@ class Character {
   }
 
   getCharacterHtml() {
-    const { name, avatar, health, maxHealth } = this;
+    const { name, avatar, health, maxHealth, imgBy } = this;
     const percent = (health / maxHealth) * 100;
     return `
         <div class="character-card">
@@ -36,14 +36,16 @@ class Character {
           <img class="avatar" src="${avatar}"/>
           <p class="health">health: <b> ${health} </b></p>
           <div class="health-bar-outer">
-              <div class="health-bar-inner ${percent < 26 ? "danger" : ""}"
+              <div class="health-bar-inner ${percent < 30 ? "danger" : ""}"
               style="width:${percent}%;">
               </div>
           </div>
           <div class="dice-container">
             ${this.diceHtml}
           </div>
-        </div>    
+         
+        </div>  
+        <div class="pic-author">${imgBy}<div>  
     `;
   }
 }

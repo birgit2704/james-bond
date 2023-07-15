@@ -21,7 +21,7 @@ const emojiJamesLoses = `<div style="width:100%;height:0;padding-bottom:76%;posi
 
 const innerHtmlJames = `
 <div class="choose-james-container">
-  <h1>Who shall be YOUR James Bond?</h1>
+  <h1>Who is YOUR James Bond?</h1>
   <form class="radio-button-container" id="choose-james-form">
     <div class="radio">
       <input id="daniel" type="radio" value="daniel" name="james" checked>

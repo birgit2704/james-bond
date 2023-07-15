@@ -211,6 +211,7 @@ main {
 }
 
 button {
+  margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--button-background);
@@ -231,10 +232,6 @@ button {
 
 button:active {
   background-color: var(--button-disabled);
-}
-
-button:disabled {
-  background-color: yellow;
 }
 
 @media (min-width: 550px) {
@@ -287,4 +284,15 @@ input[type="radio"] {
 
 #choose-james-btn {
   margin-top: 1em;
+}
+
+.pic-author {
+  color: grey;
+  width: 70vw;
+}
+@media (min-width: 550px) {
+  .pic-author {
+    width: 20vw;
+    height: 2rem;
+  }
 }
