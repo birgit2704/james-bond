@@ -23,15 +23,15 @@ const innerHtmlJames = `
 <div class="choose-james-container">
   <h1>Who shall be YOUR James Bond?</h1>
   <form class="radio-button-container" id="choose-james-form">
-    <div>
+    <div class="radio">
       <input id="daniel" type="radio" value="daniel" name="james" checked>
       <label for="daniel">Daniel Craig</label>
     </div>
-    <div>
+    <div class="radio">
       <input id="pierce" type="radio" value="pierce" name="james">
       <label for="pierce">Pierce Brosnan</label>
     </div>
-    <div>
+    <div class="radio">
       <input id="sean" type="radio" value="sean" name="james">
       <label for="sean">Sean Connery</label>
     </div>

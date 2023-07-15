@@ -3,9 +3,12 @@ import Character from "./Character.js";
 import { emojiJamesLoses, emojiJamesWins, innerHtmlJames } from "./utils.js";
 
 let james = new Character(characterData.questionmark);
-const villain = new Character(characterData.sean);
+const villainArray = ["goldfinger", "ernstStavro", "maxZorin"];
+let villain = new Character(characterData[villainArray.shift()]);
+
 const shot = new Audio("./shot.mp3");
 const bond = new Audio("./bond.mp3");
+
 const attackBtn = document.getElementById("attack-button");
 
 document.addEventListener("click", function (e) {
@@ -79,7 +82,16 @@ function checkIfDead() {
     villain.health = 0;
   }
 
-  if (james.isDead || villain.isDead) endGame();
+  if (james.isDead || (villain.isDead && villainArray.length < 1)) {
+    endGame();
+  } else if (villain.isDead && villainArray.length > 0) {
+    attackBtn.style.display = "none";
+    setTimeout(function () {
+      villain = new Character(characterData[villainArray.shift()]);
+      render();
+      attackBtn.style.display = "block";
+    }, 1500);
+  }
 }
 
 function endGame() {
@@ -91,11 +103,13 @@ function renderEndMessage() {
   let message;
   let emoji;
 
-  if (james.isDead) {
+  if (james.isDead && villain.isDead) {
+    message = "Villains are dead but James is dead, too";
+    emoji = emojiJamesLoses;
+  } else if (james.isDead) {
     message = "James has been killed";
     emoji = emojiJamesLoses;
-  }
-  if (villain.isDead) {
+  } else if (villain.isDead) {
     message = "James has defeated all villains";
     emoji = emojiJamesWins;
   }
