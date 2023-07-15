@@ -43,12 +43,6 @@ function render() {
   document.getElementById("villain").innerHTML = villain.getCharacterHtml();
 }
 
-function playSound() {
-  shot.currentTime = 0;
-  shot.play();
-  bond.play();
-}
-
 function attack() {
   playSound();
   setTimeout(function () {
@@ -57,6 +51,12 @@ function attack() {
     checkIfDead();
     render();
   }, 300);
+}
+
+function playSound() {
+  shot.currentTime = 0;
+  shot.play();
+  bond.play();
 }
 
 function rollDices() {
