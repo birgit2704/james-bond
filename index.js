@@ -3,13 +3,15 @@ import Character from "./Character.js";
 import { emojiJamesLoses, emojiJamesWins, innerHtmlJames } from "./utils.js";
 
 let james = new Character(characterData.questionmark);
-const villainArray = ["goldfinger", "ernstStavro", "maxZorin"];
+const villainArray = ["goldfinger", "blofeld", "maxZorin"];
 let villain = new Character(characterData[villainArray.shift()]);
 
 const shot = new Audio("./shot.mp3");
 const bond = new Audio("./bond.mp3");
 
 const attackBtn = document.getElementById("attack-button");
+
+// LISTENERS
 
 document.addEventListener("click", function (e) {
   if (e.target === attackBtn) {
@@ -32,14 +34,17 @@ document.addEventListener("submit", function (e) {
   }
 });
 
+// APP start:
+
 chooseJames();
+
+// MAIN Functions //
 
 function chooseJames() {
   attackBtn.style.display = "none";
   document.getElementById("hero").innerHTML = james.getCharacterHtml();
   document.getElementById("villain").innerHTML = innerHtmlJames;
 }
-// the above function renders a form, when form is submitted, the function in the submit eventlistener is called
 
 function render() {
   document.getElementById("hero").innerHTML = james.getCharacterHtml();
@@ -55,6 +60,8 @@ function attack() {
     render();
   }, 300);
 }
+
+// SECONDARY Functions
 
 function playSound() {
   shot.currentTime = 0;

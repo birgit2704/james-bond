@@ -33,7 +33,7 @@ class Character {
     return `
         <div class="character-card">
           <h4 class="name">${name} </h4>
-          <img class="avatar" src="${avatar}"/>
+          <img class="avatar" src="${avatar}" alt="${name}"/>
           <p class="health">health: <b> ${health} </b></p>
           <div class="health-bar-outer">
               <div class="health-bar-inner ${percent < 30 ? "danger" : ""}"

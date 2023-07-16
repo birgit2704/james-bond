@@ -1,25 +1,17 @@
-/* to be able to change the colors quickly, they are listed here */
 :root {
   --body-background: lightyellow;
-  --body-color: #1e6091;
-  --character-card-background: #072ac8;
-  --character-card-border: #168aad;
-  --character-card-color: white;
-  --img-border: #34a0a4;
-  --img-background: rgba(0, 7, 33, 0.8);
-  --health-color: #ccc;
-  --health-b-color: #fff;
-  --health-bar-outer-background: #171217;
+  --character-card-background: hsl(229, 93%, 41%);
+  --border-color: forestgreen;
+  --font-color: white;
+  --font-color-2: #ccc;
+  --font-color-3: grey;
+  --dark-background-or-border: rgba(0, 7, 33, 0.8);
   --health-bar-inner-background: limegreen;
   --health-bar-outer-inner-danger-background: #d1435f;
   --dice-container-background: #1e96fc;
-  --dice-background: #fff;
-  --dice-border: #111;
-  --dice-color: #000721;
-  --button-background: #fc0000;
-  --button-border: #ffc600;
-  --button-color: #fff;
-  --button-disabled: #f78a8a;
+  --button-background: rgb(252, 0, 0);
+  --button-border: darkred;
+  --button-active: rgba(252, 172, 0);
 }
 
 body {
@@ -28,7 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--body-color);
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--body-background);
 }
@@ -37,6 +28,7 @@ h1,
 label {
   color: white;
 }
+
 h1 {
   font-size: 1.5rem;
 }
@@ -49,17 +41,6 @@ main {
   height: 80vh;
 }
 
-@media (min-width: 550px) {
-  main {
-    flex-direction: row;
-    margin: 2vh 5vw 0vh;
-    justify-content: center;
-    width: 86vw;
-    gap: 2rem;
-    height: 80vh;
-  }
-}
-
 .character-card {
   height: 250px;
   margin-top: 0.5rem;
@@ -69,22 +50,13 @@ main {
   max-width: 230px;
   padding: 1vh 1vw;
   font-size: 1.6rem;
-  color: var(--character-card-color);
+  color: var(--font-color);
   border-radius: 14px;
   position: relative;
   background: var(--character-card-background);
   text-align: center;
   overflow: hidden;
-  border: 0.2rem solid var(--character-card-border);
-  /* box-shadow: inset 0px 0px 6px 2px #ffeedd, 0px 0px 10px #ffeedd; */
-}
-
-@media (min-width: 550px) {
-  .character-card {
-    border: 0.2rem solid var(--character-card-border);
-    height: 450px;
-    width: 37vw;
-  }
+  border: 0.2rem solid var(--border-color);
 }
 
 .name {
@@ -94,30 +66,16 @@ main {
   font-size: 90%;
 }
 
-@media (min-width: 550px) {
-  .name {
-    margin: 2vh 0;
-    font-size: 100%;
-  }
-}
-
 .avatar {
   width: 15vh;
-  border: 2px solid var(--img-border);
+  border: 2px solid var(--border-color);
   max-width: 100%;
   height: 80px;
   object-fit: cover;
   object-position: 100% 20%;
   opacity: 0.8;
   border-radius: 10px;
-  background-color: var(--img-background);
-}
-
-@media (min-width: 550px) {
-  .avatar {
-    width: 200px;
-    height: 150px;
-  }
+  background-color: var(--dark-background-or-border);
 }
 
 .health {
@@ -130,19 +88,13 @@ main {
   letter-spacing: 0.03em;
 }
 
-@media (min-width: 550px) {
-  .health {
-    margin: 2vh 5%;
-  }
-}
-
 .health b {
   font-weight: bold;
-  color: var(--health-b-color);
+  color: var(--font-color);
 }
 
 .health-bar-outer {
-  background: var(--health-bar-outer-background);
+  background: var(--dark-background-or-border);
   height: 1vh;
   width: 90%;
   margin: 0 5%;
@@ -173,38 +125,14 @@ main {
   gap: 0.5rem;
 }
 
-@media (min-width: 550px) {
-  .dice-container {
-    height: 30%;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-}
-
 .die,
 .placeholder-dice {
   height: 50px;
   width: 50px;
-  background: var(--dice-background);
   border-radius: 5px;
-  border: 1px solid var(--dice-border);
-  color: var(--dice-color);
+  border: 1px solid var(--dark-background-or-border);
   text-align: center;
   line-height: 6vh;
-}
-
-@media (min-width: 550px) {
-  .dice-container .dice,
-  .dice-container .placeholder-dice,
-  .dice-container .die {
-    height: 75px;
-    width: 75px;
-    line-height: 10.5vh;
-  }
-}
-
-.dice-container .placeholder-dice {
-  background-color: transparent;
 }
 
 button {
@@ -222,19 +150,13 @@ button {
   font-size: 1.5rem;
   border-radius: 6px;
   cursor: pointer;
-  color: var(--button-color);
+  color: var(--font-color);
   height: 9vh;
   box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-  background-color: var(--button-disabled);
-}
-
-@media (min-width: 550px) {
-  button {
-    margin-top: 0;
-  }
+  background-color: var(--button-active);
 }
 
 button:focus {
@@ -243,10 +165,8 @@ button:focus {
 
 .end-game {
   margin-top: 10%;
-
-  color: white;
+  color: var(--font-color);
   text-align: center;
-
   padding: 2em;
 }
 
@@ -256,9 +176,9 @@ button:focus {
 }
 
 .choose-james-container {
-  padding: 2em 2em;
+  padding: 1em 1.5em;
   max-width: 200px;
-  background-color: var(--dice-container-background);
+  background-color: darkblue;
   background-blend-mode: color-burn;
   border-radius: 14px;
 }
@@ -269,6 +189,7 @@ button:focus {
   font-size: 1.2rem;
   text-shadow: 0px 0px 3px #222;
 }
+
 input[type="radio"] {
   display: inline;
   border: 0px;
@@ -283,18 +204,55 @@ input[type="radio"] {
 
 #choose-james-btn {
   margin-top: 1em;
-  /* padding-left: 0;
-  padding-right: 0; */
   padding: 1px 0;
 }
 
 .pic-author {
-  color: grey;
+  color: var(--font-color-3);
   max-width: 300px;
   margin: 0 auto;
   text-align: center;
 }
+
 @media (min-width: 550px) {
+  main {
+    flex-direction: row;
+    margin: 2vh 5vw 0vh;
+    justify-content: center;
+    width: 86vw;
+    gap: 2rem;
+    height: 80vh;
+  }
+  .character-card {
+    height: 450px;
+    width: 37vw;
+  }
+  .name {
+    margin: 2vh 0;
+    font-size: 100%;
+  }
+  .avatar {
+    width: 200px;
+    height: 150px;
+  }
+  .health {
+    margin: 2vh 5%;
+  }
+  .dice-container {
+    height: 30%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .dice-container .dice,
+  .dice-container .placeholder-dice,
+  .dice-container .die {
+    height: 75px;
+    width: 75px;
+    line-height: 10.5vh;
+  }
+  button {
+    margin-top: 0;
+  }
   .pic-author {
     max-width: 300px;
     height: 2rem;

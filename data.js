@@ -41,8 +41,8 @@ const characterData = {
     health: 30,
     diceCount: 1,
   },
-  ernstStavro: {
-    name: "Ernst Stavro",
+  blofeld: {
+    name: "Blofeld",
     avatar:
       "https://upload.wikimedia.org/wikipedia/commons/d/d8/Christoph_Waltz_Viennale_2017_f_%28cropped%29.jpg",
     imgBy:
@@ -62,7 +62,3 @@ const characterData = {
 };
 
 export default characterData;
-
-{
-  /* */
-}
