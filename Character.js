@@ -42,10 +42,9 @@ class Character {
           </div>
           <div class="dice-container">
             ${this.diceHtml}
-          </div>
-         
+          </div> 
         </div>  
-        <div class="pic-author">${imgBy}<div>  
+        <div class="pic-author">Image:${imgBy}</div>  
     `;
   }
 }

@@ -1,6 +1,6 @@
 /* to be able to change the colors quickly, they are listed here */
 :root {
-  --body-background: #f4e6b6;
+  --body-background: lightyellow;
   --body-color: #1e6091;
   --character-card-background: #072ac8;
   --character-card-border: #168aad;
@@ -22,7 +22,6 @@
   --button-disabled: #f78a8a;
 }
 
-html,
 body {
   padding: 0;
   margin: 0;
@@ -31,11 +30,7 @@ body {
   align-items: center;
   color: var(--body-color);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-image: url("https://images.unsplash.com/photo-1645116616542-71dc4fb88086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fEphbWVzJTIwQm9uZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
-  background-size: contain;
+  background-color: var(--body-background);
 }
 
 h1,
@@ -66,8 +61,10 @@ main {
 }
 
 .character-card {
-  height: 14rem;
+  height: 250px;
   margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   width: 94vw;
   max-width: 230px;
   padding: 1vh 1vw;
@@ -85,7 +82,7 @@ main {
 @media (min-width: 550px) {
   .character-card {
     border: 0.2rem solid var(--character-card-border);
-    height: 26rem;
+    height: 450px;
     width: 37vw;
   }
 }
@@ -118,7 +115,7 @@ main {
 
 @media (min-width: 550px) {
   .avatar {
-    width: 25vh;
+    width: 200px;
     height: 150px;
   }
 }
@@ -186,8 +183,8 @@ main {
 
 .die,
 .placeholder-dice {
-  height: 5.5vh;
-  width: 5.5vh;
+  height: 50px;
+  width: 50px;
   background: var(--dice-background);
   border-radius: 5px;
   border: 1px solid var(--dice-border);
@@ -200,8 +197,8 @@ main {
   .dice-container .dice,
   .dice-container .placeholder-dice,
   .dice-container .die {
-    height: 10vh;
-    width: 10vh;
+    height: 75px;
+    width: 75px;
     line-height: 10.5vh;
   }
 }
@@ -261,8 +258,9 @@ button:focus {
 .choose-james-container {
   padding: 2em 2em;
   max-width: 200px;
-  background-color: rgb(0, 0, 0, 0.4);
-  border-radius: 20px;
+  background-color: var(--dice-container-background);
+  background-blend-mode: color-burn;
+  border-radius: 14px;
 }
 
 .radio-button-container {
@@ -276,6 +274,7 @@ input[type="radio"] {
   border: 0px;
   width: 1rem;
   height: 1rem;
+  accent-color: red;
 }
 
 .radio {
@@ -284,15 +283,21 @@ input[type="radio"] {
 
 #choose-james-btn {
   margin-top: 1em;
+  /* padding-left: 0;
+  padding-right: 0; */
+  padding: 1px 0;
 }
 
 .pic-author {
   color: grey;
-  width: 70vw;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
 @media (min-width: 550px) {
   .pic-author {
-    width: 20vw;
+    max-width: 300px;
     height: 2rem;
+    text-align: center;
   }
 }
